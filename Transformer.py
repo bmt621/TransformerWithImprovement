@@ -191,8 +191,6 @@ class TransformerEncoderLayer(nn.Module):
         self.dropout1 = nn.Dropout(dropout)
         self.dropout2 = nn.Dropout(dropout)
 
-        #self.norm1 = ResidualLayerNorm(d_model,eps_layer_norm=layer_norm_eps,dropout=dropout,**factory_kwargs)
-        #self.norm2 = ResidualLayerNorm(d_model,eps_layer_norm=layer_norm_eps,dropout=dropout,**factory_kwargs)
         self.ff = PositionWiseFeedforward(d_model,d_ff,dropout=dropout,**factory_kwargs)
 
         # string support for activation function
